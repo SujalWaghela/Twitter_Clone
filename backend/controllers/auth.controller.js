@@ -6,7 +6,7 @@ export const signup = async (req, res) => {
   try {
     const { fullName, username, email, password } = req.body;
 
-    // Validate required fields
+    // Validate required fields this is EXtra Authentication
     if (!fullName || !username || !email || !password) {
       return res.status(400).json({ error: "All fields are required" });
     }

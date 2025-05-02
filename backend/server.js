@@ -1,9 +1,9 @@
 import express from "express";
 import dotenv from "dotenv";
+import cookieParser from "cookie-parser";
 
 import authRoutes from "./routes/auth.routes.js";
 import connectMongoDB from "./db/connectMongoDB.js";
-import cookieParser from "cookie-parser";
 
 dotenv.config();
 
@@ -17,6 +17,7 @@ app.use(cookieParser());
 
 //console.log(process.env.MONGO_URI);
 
+// This was used for getting a / after the link to seprate the http://localhost:8080 / api/auth
 app.get("/", (req, res) => {
   res.send("Welcome to the Twitter Clone API!");
 });
