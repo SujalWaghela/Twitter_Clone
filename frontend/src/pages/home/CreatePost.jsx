@@ -14,6 +14,7 @@ const CreatePost = () => {
 
   const { data: authUser } = useQuery({ queryKey: ["authUser"] });
   const queryClient = useQueryClient();
+
   const {
     mutate: createPost,
     isPending,
@@ -102,7 +103,7 @@ const CreatePost = () => {
           </div>
           <input
             type="file"
-            accept="image/*"
+            accept="img/*"
             hidden
             ref={imgRef}
             onChange={handleImgChange}

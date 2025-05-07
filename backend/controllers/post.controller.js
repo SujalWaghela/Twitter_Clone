@@ -24,8 +24,9 @@ export const createPost = async (req, res) => {
     const newPost = new Post({
       user: userId,
       text,
-      img,
+      image: img,
     });
+
     await newPost.save();
     res.status(201).json(newPost);
   } catch (error) {
